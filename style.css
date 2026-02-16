@@ -1,0 +1,91 @@
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app-card {
+    background-color: #1a237e; /* Lacivert */
+    color: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 2px solid #ffd700; /* Altın Sarısı Çerçeve */
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.main-display {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    min-height: 100px;
+}
+
+#mic-btn {
+    background-color: #ffd700;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    color: #1a237e;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#mic-btn:hover {
+    transform: scale(1.05);
+    background-color: #ffea00;
+}
+/* Mobil Cihazlar İçin Özel Ayarlar */
+@media (max-width: 600px) {
+    .app-card {
+        width: 95%; /* Kenarlardan çok az boşluk kalsın */
+        padding: 15px;
+        margin: 10px auto;
+    }
+
+    #mic-btn {
+        width: 100%; /* Buton ekranı kaplasın ki rahat basılsın */
+        height: 80px;
+        font-size: 20px;
+    }
+
+    .main-display {
+        min-height: 120px;
+        font-size: 18px;
+    }
+
+    #toplam-kasa {
+        font-size: 28px; /* Para miktarı telefonda kabak gibi görünsün */
+    }
+}
+/* Telefonlar İçin Özel Ayar */
+@media (max-width: 600px) {
+    .app-card {
+        width: 100% !important;
+        margin: 0;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+    #mic-btn {
+        height: 100px !important;
+        font-size: 22px !important;
+    }
+    input[type="text"] {
+        height: 50px;
+        font-size: 16px;
+    }
+}
